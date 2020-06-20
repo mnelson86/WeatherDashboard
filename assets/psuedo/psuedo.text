@@ -1,0 +1,39 @@
+Acceptance Criteria:
+  GIVEN a weather dashboard with form inputs
+  WHEN I search for a city
+  THEN I am presented with current and future conditions for that city and that city is added to the search history
+  WHEN I view current weather conditions for that city
+  THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, 
+    the humidity, the wind speed, and the UV index
+  WHEN I view the UV index
+  THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+  WHEN I view future weather conditions for that city
+  THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, 
+    the temperature, and the humidity
+  WHEN I click on a city in the search history
+  THEN I am again presented with current and future conditions for that city
+  WHEN I open the weather dashboard
+  THEN I am presented with the last searched city forecast
+
+Format for HTML:
+  Title bar: "Weather Dashboard"
+  container with 2 rows and 2 columns
+    search column takes 1/3 of row
+    results take 2/3
+
+    
+Functional JavaScript:
+  save inputted cityName to local storage;
+  call API with cityName;
+  display cityName in local storage as UL in  inputLower;
+  on click of locally stored results from inputLower, use as new API call; 
+  display current weather conditions in resultsUpper;
+  display the requirements from line 6-7 in resultsUpper;
+  display the 5 day forecast in resultsLower;
+
+  API key: a0e7864e66bdbc3a12cc11d90f46162d
+
+  current weather API call:
+    api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+
+    
